@@ -1,0 +1,25 @@
+extend ../layouts/layout
+
+block vars 
+  -title = 'Detail Staffs'
+  -bodyClass = 'staffs'
+  -Data = reqData
+
+block container 
+  .container
+    .information 
+      .information-card 
+        .information-card-header 
+          img(src=`${Data.avatar_url}`, alt="Avatar")
+        .line
+        .information-card-content 
+          span #{Data.full_name}
+      //- ul.information-detail
+      //-   li(onclick='changeProfile()').information-detail-item.profile#profile Profile 
+    .main-layout-card 
+      #profile-pages
+        h1 Profile 
+        include ../blocks/block_profile
+
+block append scripts 
+  script(src="../../scripts/product.js") 

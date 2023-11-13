@@ -1,0 +1,20 @@
+// .wrapper {
+//     // max-width: $wrapper;
+//     // margin: 0 auto;
+//     // background-color: rgb(249, 249, 249);
+// }
+// .container {
+//     // max-width: $container + 30px;
+//     // margin: 0 auto;
+//     // padding: 0 15px;
+// }
+.wrappper-index{
+    display: flex;
+    flex-direction: row;
+}
+.container1{
+    height: calc(100vh - 7rem);
+    margin-left: 15rem;
+    background-color: $background-color;
+    overflow-y: auto;
+}

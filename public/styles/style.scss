@@ -1,0 +1,26 @@
+@import "./helpers/function";
+@import "./helpers/mixins";
+@import "./helpers/ultilities";
+@import "./helpers/variables";
+@import "./helpers/gobal";
+@import "./helpers/animation";
+
+@import "./components/buttons";
+
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/sidebar";
+@import "./layouts/slider";
+@import "./layouts/structure";
+
+@import "bases/typography";
+
+@import "pages/login.scss";
+@import "pages/register.scss";
+@import "pages/index.scss";
+@import "pages/profile.scss";
+@import "pages/product.scss";
+@import "pages/sale.scss";
+@import "pages/error.scss";
+@import "pages/payment.scss";
+@import "pages/dashboard.scss";

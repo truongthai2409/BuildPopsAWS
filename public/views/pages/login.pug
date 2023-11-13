@@ -1,0 +1,42 @@
+block mixins 
+    include ../blocks/mixins.pug
+block vars 
+    -title = 'Sign In'
+    -bodyClass = ''
+
+doctype html
+html(lang="en")
+  head
+    title=title 
+    include ../blocks/head
+    script(src="./scripts/validator.js") 
+    
+  body(class = bodyClass)
+    .wrappper
+      block container 
+        .modal
+          .modal-content
+            h3 Sign In 
+            p For security, please sign in to access your information
+            form.form(action='/' method='method')#formLogin
+              .form-group
+                label(for='email') Email
+                input.form-control(type='email',id='email', name='email' placeholder='Email')
+                spsan.form-message
+              .form-group
+                label(for='password') Password
+                input.form-control(type='password',id='password', name='password' placeholder='Password' )
+                spsan.form-message
+              .other
+                a.other-create(href='/register') Create account
+                .forgot 
+                  i.other-forgot.fa-solid.fa-lock
+                  a.other-forgot(href='/forgot') Forgot password?
+              button.button(type='submit' value='login') Sign In
+      block foot
+        include ../blocks/footer
+    include ../blocks/scripts.pug 
+    script(src="./scripts/validate.js") 
+    //- script(src="./scripts/login.js")    
+  
+

@@ -1,0 +1,26 @@
+extend ../layouts/layout
+
+block vars 
+  -title = 'Create Staffs'
+  -bodyClass = 'create-staffs'
+  -Data = reqData
+
+block container 
+  .container
+    .modal-index
+        .modal-content
+          h3 Confirm Password
+          p For security, please sign in to access your information
+          form.form(action='/' method='method')#formLogin
+            .form-group
+              label(for='password') Password
+              input.form-control(type='password',id='password', name='password' placeholder='Password')
+              spsan.form-message
+            .form-group
+              label(for='password') Confirm Password
+              input.form-control(type='password',id='password', name='password' placeholder='Confirm Password')
+              spsan.form-message
+            button.button(type='submit' value='login') Sign In
+
+block append scripts 
+  script(src="../../scripts/product.js") 

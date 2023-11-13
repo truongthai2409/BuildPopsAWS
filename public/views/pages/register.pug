@@ -1,0 +1,54 @@
+block mixins 
+  include ../blocks/mixins.pug
+block vars 
+  -title = 'Sign Up'
+  -bodyClass = 'wrappper'
+doctype html
+html(lang="en")
+  head
+    title=title 
+    include ../blocks/head
+    script(src="./scripts/validator.js") 
+  body(class = bodyClass)
+    block container 
+      .modal-register
+        .modal-content.modal-content-register
+          h3 Sign Up
+          form.form(action='#' method='method')#formRegister
+            .form-group
+              label(for='name') Full Name
+              input.form-control(type='text', id = 'name' name='name' placeholder='Full Name')
+              span.form-message
+            //- .form-group
+            //-   label(for='LastName') Last Name
+            //-   input.form-control(type='text' id='LastName' name='LastName' placeholder='LastName')
+            //-   span.form-message
+            .form-group
+              label(for='email') Email
+              input.form-control(type='email' id='email' name='email' placeholder='Email')
+              span.form-message
+            .form-group   
+              label(for='date_of_birth') Birth
+              input.form-control(id='date_of_birth' type="date" name="date_of_birth", required pattern="\d{4}-\d{2}-\d{2}")
+            .form-group
+              label(for='password') Password
+              input.form-control(type='password' id='password' name='password' placeholder='Password')
+              span.form-message
+            .form-group
+              label(for='password_confirmation') Confirm Password
+              input.form-control(type='password' id='password_confirmation' name='password' placeholder='Password')  
+              span.form-message
+            button.button-signUp(type='submit' value='submit') Sign Up
+            .line 
+              span.line-text or continue with
+            .form-group
+              .div
+                a.button-signIn(href='/login') Already have an account? Sign In
+    block foot
+      include ../blocks/footer
+    script(src="./scripts/validate.js") 
+    script(src="./scripts/slider.js")    
+    script(src="./scripts/register.js")    
+
+
+

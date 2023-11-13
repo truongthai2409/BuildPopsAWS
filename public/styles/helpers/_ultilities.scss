@@ -1,0 +1,56 @@
+//==================================
+/* CSS cho toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 25px;
+}
+
+/* Đảm bảo rằng khi input (checkbox) được bật, slider sẽ thay đổi màu */
+.toggle-switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* Slider (nút trượt) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Chỉnh kích thước của toggle switch */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.confirm_password{
+  .modal{
+    background-color: rgb(236, 236, 237);
+  }
+}

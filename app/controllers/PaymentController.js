@@ -1,0 +1,13 @@
+class PaymentController {
+    //GET[] / index
+    success(req, res) {
+        // let newData = req.data;
+        // res.render('../public/views/pages/',  { reqData: newData })
+        res.render('../public/views/pages/payment_success',)
+    }
+    error(req, res){
+        res.render('../public/views/pages/payment_error',)
+    }
+}
+
+module.exports = new PaymentController();
